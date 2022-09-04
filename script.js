@@ -23,19 +23,19 @@ for (const framework of frameworks) {
   let server
 
   if (framework.runtime === 'Bun') {
-    server = $`bun run ${framework.path}`.nothrow()
+    server = $`bun run ${framework.path}`
   }
 
   if (framework.runtime === 'Node') {
-    server = $`node ${framework.path}`.nothrow()
+    server = $`node ${framework.path}`
   }
 
   if (framework.runtime === 'Deno') {
-    server = $`deno run --allow-net ${framework.path} ${framework.args || ''}`.nothrow()
+    server = $`deno run --allow-net ${framework.path} ${framework.args || ''}`
   }
 
   if (framework.runtime === 'Deno - Flash') {
-    server = $`deno run --unstable --allow-net ${framework.path} ${framework.args || ''}`.nothrow()
+    server = $`deno run --unstable --allow-net ${framework.path} ${framework.args || ''}`
   }
 
   await sleep()
