@@ -28,10 +28,10 @@ jobs:
         run: bun upgrade --canary
       - name: Install oha
         run:
-          echo "deb http://packages.azlux.fr/debian/ buster main" | sudo tee /etc/apt/sources.list.d/azlux.list
-          wget -qO - https://azlux.fr/repo.gpg.key | sudo apt-key add -
-          apt update
-          apt install oha
+          - echo "deb http://packages.azlux.fr/debian/ buster main" | sudo tee /etc/apt/sources.list.d/azlux.list
+          - wget -qO - https://azlux.fr/repo.gpg.key | sudo apt-key add -
+          - apt update
+          - apt install oha
       - name: Install modules
         run: yarn install
       - name: Run benchmarks
