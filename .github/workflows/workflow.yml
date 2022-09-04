@@ -27,8 +27,8 @@ jobs:
         uses: antongolub/action-setup-bun@v1.4.0
       - name: Update Bun
         run: bun upgrade --canary
-        name: Install oha
       - uses: supplypike/setup-bin@v1
+        name: Install oha
         with:
           uri: 'https://github.com/hatoo/oha/releases/download/v0.5.4/oha-linux-amd64'
           name: 'oha'
