@@ -1,28 +1,6 @@
 export const frameworks = [
   {
     name: 'Hono',
-    runtime: 'Deno',
-    path: './src/deno/hono.ts',
-  },
-  {
-    name: 'Hono - RegExpRouter',
-    runtime: 'Deno',
-    args: '--reg-exp-router',
-    path: './src/deno/hono.ts',
-  },
-  {
-    name: 'Hono',
-    runtime: 'Deno - Flash',
-    path: './src/deno/hono-flash.ts',
-  },
-  {
-    name: 'Hono - RegExpRouter',
-    runtime: 'Deno - Flash',
-    args: '--reg-exp-router',
-    path: './src/deno/hono-flash.ts',
-  },
-  {
-    name: 'Hono',
     runtime: 'Bun',
     path: './src/hono.ts',
   },
@@ -76,5 +54,27 @@ export const frameworks = [
     name: 'Express',
     runtime: 'Bun',
     path: './src/express.js',
+  },
+  {
+    name: 'Hono',
+    runtime: 'Deno',
+    path: './src/deno/hono.ts',
+  },
+  {
+    name: 'Hono - RegExpRouter',
+    runtime: 'Deno',
+    args: '--reg-exp-router',
+    path: './src/deno/hono.ts',
+  },
+  {
+    name: 'Hono',
+    runtime: 'Deno - Flash',
+    path: './src/deno/hono-flash.ts',
+  },
+  {
+    name: 'Hono - RegExpRouter',
+    runtime: 'Deno - Flash',
+    args: '--reg-exp-router',
+    path: './src/deno/hono-flash.ts',
   },
 ]
