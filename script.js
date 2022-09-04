@@ -4,7 +4,7 @@ import rimraf from 'rimraf'
 import { $ } from 'zx'
 import { frameworks } from './frameworks.js'
 
-const seconds = process.env.BENCH_SECONDS || 5
+const seconds = process.env.BENCH_SECONDS || 3
 
 const format = (n) => Intl.NumberFormat('en-US').format(Math.trunc(n))
 const sleep = (s = 1) => new Promise((resolve) => setTimeout(resolve, s * 1000))
@@ -55,9 +55,7 @@ for (const framework of frameworks) {
     scores: scores,
   })
 
-  if (server) {
-    await server.kill()
-  }
+  await server.kill()
 }
 
 results.sort((a, b) => {
