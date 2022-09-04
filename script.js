@@ -4,7 +4,7 @@ import rimraf from 'rimraf'
 import { $ } from 'zx'
 import { frameworks } from './frameworks.js'
 
-const seconds = process.env.BENCH_SECONDS || 2
+const seconds = process.env.BENCH_SECONDS || 5
 
 const format = (n) => Intl.NumberFormat('en-US').format(Math.trunc(n))
 const sleep = (s = 1) => new Promise((resolve) => setTimeout(resolve, s * 1000))
@@ -12,7 +12,7 @@ const sleep = (s = 1) => new Promise((resolve) => setTimeout(resolve, s * 1000))
 const commands = [
   `oha -z ${seconds}s -c 50 -j http://localhost:3001/`,
   `oha -z ${seconds}s -c 50 -j http://localhost:3001/posts/123/comments?query=foo`,
-  //`oha -z ${seconds}s -c 50 -j -m POST -D body.json http://localhost:3001/posts`,
+  `oha -z ${seconds}s -c 50 -j -m POST -D body.json http://localhost:3001/posts`,
 ]
 
 const results = []
