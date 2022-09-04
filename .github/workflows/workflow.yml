@@ -1,0 +1,38 @@
+name: bench
+'on':
+  schedule:
+    - cron: 0 0 * * *
+  push:
+    paths:
+      - '**.ts'
+      - '**.js'
+      - '**.tsx'
+      - '**.jsx'
+      - '**.yml'
+      - '**.json'
+
+jobs:
+  bench:
+    name: 'Benchmark'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Install Node
+        uses: actions/setup-node@v3
+      - name: Install Deno
+        uses: denoland/setup-deno@v1
+      - name: Install Bun
+        uses: antongolub/action-setup-bun@v1.4.0
+      - name: Update Bun
+        run: bun upgrade --canary
+      - name: Install oha
+        run:
+          echo "deb http://packages.azlux.fr/debian/ buster main" | sudo tee /etc/apt/sources.list.d/azlux.list
+          wget -qO - https://azlux.fr/repo.gpg.key | sudo apt-key add -
+          apt update
+          apt install oha
+      - name: Install modules
+        run: yarn install
+      - name: Run benchmarks
+        run: yarn start
