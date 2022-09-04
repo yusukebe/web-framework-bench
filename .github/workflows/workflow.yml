@@ -27,12 +27,11 @@ jobs:
         uses: antongolub/action-setup-bun@v1.4.0
       - name: Update Bun
         run: bun upgrade --canary
-      - name: Install oha
-        run: |
-          echo "deb http://packages.azlux.fr/debian/ buster main" | sudo tee /etc/apt/sources.list.d/azlux.list \
-          wget -qO - https://azlux.fr/repo.gpg.key | sudo apt-key add - \
-          apt update \ 
-          apt install oha
+        name: Install oha
+      - uses: supplypike/setup-bin@v1
+        with:
+          uri: 'https://github.com/hatoo/oha/releases/download/v0.5.4/oha-linux-amd64'
+          name: 'oha'
       - name: Install modules
         run: yarn install
       - name: Run benchmarks
