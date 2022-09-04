@@ -56,7 +56,6 @@ for (const framework of frameworks) {
   })
 
   await server.kill()
-  await sleep()
 }
 
 results.sort((a, b) => {
