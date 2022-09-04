@@ -1,6 +1,6 @@
 # Web Framework Bench
 
-For Web framework on Node, on Deno, and on Bun.
+For web frameworks on Node, on Deno, and on Bun.
 
 Fast is not everything, but fast is everything.
 
