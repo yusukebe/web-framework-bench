@@ -1,18 +1,18 @@
 
   |  Framework     |  Runtime       |  GET /    | GET /posts/123/comments?query=foo | POST /posts  |
   | ----------- | ----------- | -----------  | -----------  | ----------- |
-  | Hono | Deno - Flash | 184,802 | 80,291 | 46,547 |
-| Hono - RegExpRouter | Deno - Flash | 164,040 | 80,970 | 46,484 |
-| KingWorld | Bun | 134,615 | 97,259 | 107,024 |
-| Hono | Bun | 125,365 | 77,607 | 97,117 |
-| Bun Bakery | Bun | 118,160 | 86,813 | 74,109 |
-| HyperBun | Bun | 113,282 | 82,264 | 74,187 |
-| Fastify | Node | 83,383 | 71,635 | 42,067 |
-| Hono - RegExpRouter | Bun | 73,507 | 96,282 | 101,304 |
-| Fast | Deno | 72,249 | 34,071 | 33,249 |
-| Hono - RegExpRouter | Deno | 70,449 | 54,240 | 33,729 |
-| Hono | Deno | 69,876 | 53,802 | 33,433 |
-| Alosaur | Deno | 63,738 | 19,212 | NaN |
-| Oak | Deno | 47,685 | 43,419 | 24,050 |
-| Express | Bun | 43,040 | 40,177 | 39,887 |
-| Express | Node | 23,391 | 21,175 | 20,601 |
+  | Hono | Bun | 47,119 | 34,172 | 24,306 |
+| HyperBun | Bun | 45,471 | 33,558 | 28,746 |
+| Bun Bakery | Bun | 45,053 | 34,632 | 29,685 |
+| KingWorld | Bun | 44,542 | 37,148 | 38,694 |
+| Hono - RegExpRouter | Bun | 43,428 | 39,210 | 39,273 |
+| Hono - RegExpRouter | Deno - Flash | 28,115 | 15,708 | 7,336 |
+| Hono | Deno | 27,996 | 17,749 | 6,645 |
+| Hono - RegExpRouter | Deno | 27,867 | 17,806 | 8,834 |
+| Hono | Deno - Flash | 25,773 | 16,132 | 6,809 |
+| Fastify | Node | 14,109 | 11,147 | 7,997 |
+| Oak | Deno | 12,155 | 10,971 | 5,409 |
+| Express | Bun | 9,626 | 8,791 | 8,421 |
+| Express | Node | 4,501 | 4,367 | 4,111 |
+| Fast | Deno | NaN | 8,332 | 8,568 |
+| Alosaur | Deno | NaN | 3,691 | 16,899 |
