@@ -65,7 +65,7 @@ export const frameworks = [
   {
     name: 'HyperBun',
     runtime: 'Bun',
-    path: './src/HyperBun.ts',
+    path: './src/hyperbun.ts',
   },
   {
     name: 'Bun Bakery',
