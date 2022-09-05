@@ -9,7 +9,6 @@ export const frameworks = [
     runtime: 'Bun',
     path: './src/hono-reg-exp-router.ts',
   },
-
   {
     name: 'Express',
     runtime: 'Node',
